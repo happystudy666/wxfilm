@@ -1,0 +1,82 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"appid": "wxda9c7875d86932a2",
+	"projectname": "wxitem",
+	"libVersion": "2.7.7",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"compileType": "miniprogram",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "电影详情编译",
+					"pathName": "pages/detail/detail",
+					"query": "movieid=19971676",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "个人",
+					"pathName": "pages/person/person",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收藏",
+					"pathName": "pages/collection/collection",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "地图",
+					"pathName": "pages/channel/channel",
+					"scene": null
+				}
+			]
+		}
+	}
+}

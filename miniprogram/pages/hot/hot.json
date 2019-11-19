@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-icon": "../../miniprogram_npm/vant-weapp/icon/index",
+    "van-rate": "../../miniprogram_npm/vant-weapp/rate/index"
+  },
+  "navigationBarTitleText": "本周热门电影"
+}

@@ -1,0 +1,16 @@
+<!--pages/person/person.wxml-->
+<view class='userinfo'>
+  <van-button type="primary" wx:if="{{ishiden}}" custom-class='loginbtn' open-type="getUserInfo" bindgetuserinfo="bingGetUserInfo">微信一键登录</van-button>
+  <view class="profile-img" wx:if="{{!ishiden}}">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view wx:if="{{!ishiden}}">
+    <open-data type="userNickName" class="profile-name">
+    </open-data>
+  </view>
+</view>
+<view>
+<view class='personlist' bindtap='gotowant'><text style='margin-right:20rpx;' >我想看的</text><van-tag round >{{likenumber}}</van-tag></view>
+<view class='personlist'><text>我的评论</text></view>
+<view class='personlist'><text>关于我们</text></view>
+</view>

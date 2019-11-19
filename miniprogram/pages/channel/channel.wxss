@@ -1,0 +1,29 @@
+/* pages/channel/channel.wxss */
+.title{
+  padding: 20rpx 40rpx 40rpx 40rpx;
+  height: 50rpx;
+display: flex;
+align-items: center;
+  font-weight: bolder;
+  justify-content: space-between;
+}
+.distance{
+  height: 100rpx;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  font-size: 26rpx;
+  border: 1px dashed #f0f3f6;
+  margin-top: 10rpx;
+  padding:0 20rpx 0 20rpx; 
+}
+.distancenum{
+text-align: right;
+}
+.backimg{
+  width: 80rpx;
+  height:80rpx;
+  position: absolute;
+  top: 50%;
+  margin-top:-40rpx; 
+}

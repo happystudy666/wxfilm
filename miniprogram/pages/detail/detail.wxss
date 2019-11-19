@@ -1,0 +1,58 @@
+/* pages/detail/detail.wxss */
+.bodybgcontent{
+height: 420rpx;
+  width: 100%;
+  filter: blur(100rpx);
+  opacity: 0.6;
+}
+.leftimg{
+  height: 90%;
+width: 320rpx;
+  margin-left:40rpx; 
+  margin-right: 20rpx;
+}
+.film-info{
+  width: 98%;
+  height: 420rpx;
+  position: absolute;
+  top: 0;left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-top:30rpx ;
+}
+.commenttext{
+  flex-flow: 1;
+  flex-direction: column;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.flmgenres{
+ margin-right:7rpx;
+ font-size:24rpx;
+ color: #333;
+}
+.detailtextopen{
+font-size:24rpx;
+}
+.detailtextclose{
+font-size:24rpx;
+line-height: 44rpx;
+height: 130rpx;overflow: hidden;
+}
+.closetext{
+  text-align: right;
+  color: #e6e6e6;
+}
+.likecolor{
+  color:#f07f19
+}
+.scorestyle{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.comment{
+   color:#f07f19;
+   font-size: 32rpx;
+   margin-right:30rpx; 
+}

@@ -1,0 +1,12 @@
+<!--pages/collection/collection.wxml-->
+<view>
+<view style='margin-top:20rpx;' wx:if="{{collectionfilm.length>0}}">
+<view wx:for="{{collectionfilm}}" wx:key="index"  class='collection'>
+  <view>{{item.title}}</view>
+</view>
+</view>
+<view wx:if="{{collectionfilm.length==0}}" class='hasnocollection'>
+  <view>暂无想看的电影!逛逛去</view>
+  <image src='../../images/nothing.jpg'></image>
+</view>
+</view>

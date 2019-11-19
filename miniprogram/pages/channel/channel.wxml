@@ -1,0 +1,15 @@
+<!--pages/channel/channel.wxml-->
+<view style="font-size:24rpx;padding:20rpx 40rpx;">当前位置  {{province}}  {{city}}</view>
+<view class="title"><text>您附近的电影院 </text><image src="../../images/cinema.svg" style="height:100rpx;width:100rpx;margin-right:100rpx;"></image></view>
+<view wx:if="{{cinemishiden}}" class="distance">
+<view>{{cinem}}</view>
+<view class="distancenum"> 距离您约 {{distance}}km</view>
+</view>
+<map  markers="{{maskers}}" style="width:100%;height:500rpx;position: relative" longitude="{{longitude}}" latitude="{{latitude}}" scale='15'  wx:if="{{hasmaskers}}" show-compass="{{true}}" bindcallouttap="getlong">
+
+<cover-image  class="backimg" src="../../images/back.png" bindtap="clickcontrol" />
+
+
+</map>
+
+

@@ -1,0 +1,44 @@
+<!--pages/index/index.wxml-->
+<view class='comingfilmcontainer'>
+<van-search
+  value="{{ value }}"
+  placeholder="请输入您要搜索的电影"
+  show-action
+  bind:change="onSearchfilm"
+  use-action-slot="{{true}}"
+  focus="{{false}}" 
+  shape="round/"
+/>  
+<!--  -->
+<view  class='mycenter'>
+<view  class='serachitem' wx:if="{{serachcontent.length>0}}">
+<view style='display: flex;justify-content: space-between;' wx:for="{{serachcontent}}" wx:key="index" >
+  <text  class='serachtitle'>{{item.title}}</text>
+  <text class='serachtitle'>{{item.country}}</text>
+</view>
+</view> 
+ <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  circular="{{true}}"  style='height:500rpx;'>
+    <swiper-item wx:for="{{comingfilm}}" wx:key='index'> 
+      <image src="{{item.images.medium}}" class="slide-image"  bindtap='getnewfilm'           data-mid="{{item.id}}"/>
+      <text class='slidetext'>{{item.title}} -- 即将上映</text>
+    </swiper-item>
+</swiper>
+</view>
+</view>
+<view class='mycenter mytitle'>
+  <rich-text nodes="{{nodes}}"></rich-text>
+  <rich-text nodes="{{more}}" bindtap='learnhot'></rich-text>
+</view>
+<scroll-view scroll-x="true" class='indexscroll'  scroll-with-animation="true">
+<!--  点击详情-->
+  <view class='scrollitem' wx:for="{{hotfilm}}" wx:key='index' >
+    <image src="{{item.subject.images.medium}}" class="slide-image" catchtap='getdetail' data-mid="{{item.subject.id}}"></image>
+      <text class='titlename'>{{item.subject.title}}</text>
+      <view class='rating'>
+  <van-rate readonly value="{{item.subject.rating.average/2}}" size="10" 
+allow-half/>
+<text style='font-size:18rpx;'>{{item.subject.rating.average}}分</text>
+  </view>
+  </view>
+</scroll-view>
+

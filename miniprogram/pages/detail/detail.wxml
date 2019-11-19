@@ -1,0 +1,41 @@
+<!--pages/detail/detail.wxml-->
+<view  >
+  <view style='background:url({{ filmdetail.images.large}})  no-repeat  top; overflow: hidden;background-size:cover; ' class='bodybgcontent'></view>
+     <view class='film-info'>
+         <image src="{{filmdetail.images.large}}" class='leftimg'></image>
+     <view class='commenttext'>
+      <view style='font-size:38rpx;font-weight: bolder;'>{{filmdetail.title}}({{filmdetail.year}})</view>
+<view style='font-size:28rpx;'>{{filmdetail.original_title}}({{filmdetail.year}})</view>
+<!-- 电影简介文字 -->
+<view>
+<text wx:for='{{filmdetail.genres}}' wx:key="index" class='flmgenres'> {{item}}</text> 
+ <text class='flmgenres'>/ {{filmdetail.countries}}</text>
+ <text class='flmgenres'>/ 片长{{filmdetail.durations}}</text>
+</view>
+ <view class='flmgenres' >导演:{{filmdetail.writers[0].name}}</view>
+ <view>
+   <text style='font-size:30rpx;color:#fc0;margin-top:4rpx;margin-right:30rpx;'>评分：{{filmdetail.rating.average>0?filmdetail.rating.average:"暂无评"}}分</text>
+  <van-button   size="small" round open-type="getUserInfo" bindgetuserinfo="bingGetUserInfo">
+  <text style='font-size:26rpx'>想看</text>
+  <van-icon name="like-o"  custom-class="likecolor" size='28rpx' />
+ </van-button>
+</view>
+ </view>
+    </view>
+    <view style='padding:60rpx 60rpx 0 60rpx;'>
+     <view style='font-size:30rpx; font-weight: bolder;margin-bottom:8rpx;'>简介</view>
+    <view class="{{isclose?'detailtextopen':'detailtextclose'}}">
+     {{filmdetail.summary}}
+    </view>
+   <view class="flmgenres closetext" bindtap='closebtn' >{{closetext}}   </view>
+    <view style='font-size:30rpx; font-weight: bolder;margin-top:20rpx;'>写评论</view>
+    <van-field
+    value="{{content}}"
+    placeholder="好看吗，快来写下你的感受吧~"
+    bind:change="onContentChange"
+  /> 
+  <view class='scorestyle'>
+  <van-rate value="{{score/2 }}" bind:change="onChangeScore" size="{{30}}" allow-half="{{true}}" /><text class='comment'>{{score}}分  {{score<=2?'超烂啊':score<=4?'比较差':score<=6?'一般般':score<=8?'比较好':'很棒'}}</text>
+  </view>
+    </view>
+</view>

@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/channel/channel",
+    "pages/person/person",
+    "pages/search/search",
+    "pages/hot/hot",
+    "pages/detail/detail",
+    "pages/collection/collection"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "films",
+    "navigationBarTextStyle": "black"
+  },
+  
+  "sitemapLocation": "sitemap.json","tabBar": {
+    "color": "#000000",
+    "selectedColor": "#f07f19",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/Home-normal.png",
+        "selectedIconPath": "images/home-selected.png"
+      },
+      {
+        "pagePath": "pages/channel/channel",
+        "text": "附近",
+        "iconPath": "images/map-normal.png",
+        "selectedIconPath": "images/map-selected.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "images/personal-normal.png",
+        "selectedIconPath": "images/personal-selected.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取你的地理位置"
+    }
+  }
+
+}

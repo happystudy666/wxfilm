@@ -1,0 +1,12 @@
+<!--pages/hot/hot.wxml-->
+<view class='mycenter' style='margin-top:50rpx;'>
+  <view class='scrollitem' wx:for="{{hotfilm}}" wx:key='index'  >
+    <image src="{{item.subject.images.medium}}" class="slide-image" catchtap='getdetail' data-mid="{{item.subject.id}}"></image>
+      <text class='titlename'>{{item.subject.title}}</text>
+      <view class='rating'>
+  <van-rate readonly value="{{item.subject.rating.average/2}}" size="16" 
+allow-half  />
+<text style='font-size:28rpx;'>{{item.subject.rating.average}}分</text>
+  </view>
+  </view>
+</view>
